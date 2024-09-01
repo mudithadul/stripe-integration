@@ -1,5 +1,9 @@
 import { Router } from 'express';
 import { ENV } from './config/configs';
+import userRoutes from './routes/userRoutes';
+import stripeUserRoutes from './routes/stripeUserRoutes';
+import transactionRoutes from './routes/transactionRoutes';
+import tokenAccountRoutes from './routes/tokenAccountRoutes';
 
 /**
  * Contains all API routes for the application.
@@ -26,6 +30,10 @@ router.get('/health', (req, res) => {
   }
 });
 
-// router.use('/emails', emailRoutes);
+router.use('/users', userRoutes);
+router.use('/stripe-users', stripeUserRoutes);
+router.use('/transactions', transactionRoutes);
+router.use('/tokens', tokenAccountRoutes)
+
 
 export default router;
