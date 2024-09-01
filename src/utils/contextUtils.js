@@ -42,13 +42,6 @@ export function getDbIdentifier() {
   return dbIdentifier;
 }
 
-/**
- * This is used to identify the tenant. Including schema name.
- */
-export function getSchemaName() {
-  const { tenantIdentifier } = getUserTenant();
-  return `${tenantIdentifier}${DB_SCHEMA_SUFFIX}`;
-}
 
 export function getEmailCommonSchemaName() {
   return 'email_common';

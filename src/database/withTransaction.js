@@ -1,4 +1,4 @@
-import getDbConnection from './dbConnection';
+import { getDbConnection } from './dbConnection';
 
 export default async (wrappedFunction, ...args) => {
   const dbConnection = await getDbConnection();

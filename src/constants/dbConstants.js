@@ -26,3 +26,5 @@ export const POOL_TYPE = {
   READ_WRITE_POOL: false,
   READ_POOL: true
 };
+
+export const DB_SCHEMA_NAME = "client_template_stripe";
